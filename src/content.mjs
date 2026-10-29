@@ -1,5 +1,6 @@
 // Personal facts transcribed from Mongaya_Resume.pdf. Keep claims and links
 // grounded in a supplied resume or other explicit information from Dwayne.
+// Senior high school details and both school logos were supplied separately.
 export const profile = {
   name: 'Dwayne Carmelo M. Mongaya',
   firstLine: 'Dwayne Carmelo',
@@ -76,9 +77,22 @@ export const certifications = [
   { name: 'Linux Essentials', year: '2025', url: '' },
 ];
 
-export const education = {
+export const education = [{
   school: 'Far Eastern University Institute of Technology',
   degree: 'Bachelor of Science in Computer Science',
   specialization: 'Specialization in Data Science',
   date: '2023 – Present',
-};
+  logo: '/assets/feutechlogo.png',
+  logoAlt: 'FEU Institute of Technology logo',
+  logoWidth: 200,
+  logoHeight: 200,
+}, {
+  school: 'Meycauayan College, Inc.',
+  degree: 'Senior High School',
+  specialization: 'Science, Technology, Engineering, and Mathematics (STEM)',
+  date: '2021–2023',
+  logo: '/assets/mclogo.png',
+  logoAlt: 'Meycauayan College, Inc. logo',
+  logoWidth: 239,
+  logoHeight: 239,
+}];

@@ -9,6 +9,6 @@
     "dev": "node --watch scripts/serve.mjs",
     "build": "node scripts/build.mjs",
     "preview": "node scripts/serve.mjs --preview",
-    "check": "node --check src/content.mjs && node --check src/render.mjs && node --check public/main.js && node --check scripts/build.mjs && node --check scripts/serve.mjs"
+    "check": "node --check src/content.mjs && node --check src/render.mjs && node --check public/main.js && node --check public/theme.js && node --check scripts/build.mjs && node --check scripts/serve.mjs"
   }
 }

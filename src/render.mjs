@@ -11,6 +11,8 @@ const paths = {
   award: '<circle cx="12" cy="8" r="5"/><path d="m8 12-2 9 6-3 6 3-2-9"/>',
   mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/>',
   menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/>',
+  moon: '<path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/>',
 };
 const icon = (name, cls = '') => `<svg class="icon ${cls}" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.arrow}</svg>`;
 const external = (url, label, cls = 'text-link') => `<a class="${cls}" href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(label)}${icon('arrow')}<span class="sr-only"> (opens in a new tab)</span></a>`;
@@ -24,12 +26,14 @@ export function render() {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#F8F8F8">
+  <meta name="color-scheme" content="light dark">
   <meta name="description" content="${escape(profile.name)} — graduating Computer Science student specializing in Data Science at FEU Institute of Technology. Explore projects, experience, and skills.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="${escape(profile.name)} | Computer Science &amp; Data Science">
   <meta property="og:description" content="${escape(profile.introduction)}">
   <title>${escape(profile.name)} | Computer Science &amp; Data Science</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script src="/theme.js"></script>
   <link rel="stylesheet" href="/styles.css">
   <script src="/main.js" defer></script>
 </head>
@@ -40,13 +44,12 @@ export function render() {
       <a class="wordmark" href="#profile" aria-label="Dwayne Mongaya, back to profile">dm<span>.</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">${icon('menu')}<span>Menu</span></button>
       <nav id="main-nav" aria-label="Main navigation">${nav.map(([id, text]) => `<a href="#${id}">${text}</a>`).join('')}</nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" hidden>${icon('sun', 'theme-sun')}${icon('moon', 'theme-moon')}</button>
     </div>
   </header>
   <main id="main">
     <section id="profile" class="hero container" aria-labelledby="profile-title">
       <div class="hero-main">
-        <p class="availability"><span class="status-dot"></span> Seeking internship opportunities</p>
-        <p class="eyebrow hero-eyebrow">Hello, I’m</p>
         <h1 id="profile-title">${escape(profile.firstLine)}<br>${escape(profile.secondLine)}<span class="name-dot">.</span></h1>
         <p class="hero-role">Computer Science student<span aria-hidden="true"> / </span><strong>${escape(profile.specialization)}</strong></p>
         <p class="hero-intro">${escape(profile.introduction)}</p>
@@ -84,7 +87,7 @@ export function render() {
 
     <section id="education" class="section container" aria-labelledby="education-title">
       ${heading('05', 'Educational background', '<span id="education-title">Where it all comes together<span class="title-dot">.</span></span>')}
-      <article class="education-card"><div class="education-mark" aria-hidden="true">FEU<span>TECH</span></div><div class="education-details"><p class="eyebrow">${escape(education.date)}</p><h3>${escape(education.school)}</h3><p class="degree">${escape(education.degree)}</p><p>${escape(education.specialization)}</p></div></article>
+      <div class="education-list">${education.map(school => `<article class="education-card"><div class="education-logo"><img src="${escape(school.logo)}" width="${school.logoWidth}" height="${school.logoHeight}" alt="${escape(school.logoAlt)}" loading="lazy" decoding="async"></div><div class="education-details"><p class="eyebrow">${escape(school.date)}</p><h3>${escape(school.school)}</h3><p class="degree">${escape(school.degree)}</p><p>${escape(school.specialization)}</p></div></article>`).join('')}</div>
     </section>
 
     <section id="contact" class="contact-section" aria-labelledby="contact-title"><div class="container contact-inner"><div class="contact-main"><p class="eyebrow"><span class="section-number">06</span> Contact</p><h2 id="contact-title">Let’s build<br><span>what’s next.</span></h2><p>${escape(profile.goal)}</p><a class="button button-light" href="mailto:${escape(profile.email)}">Let’s get in touch ${icon('arrow')}</a></div><div class="contact-details"><p class="contact-label">SAY HELLO</p><a class="contact-email" href="mailto:${escape(profile.email)}">${escape(profile.email)} ${icon('arrow')}</a><div class="contact-facts"><div><span>Based in</span><p>${escape(profile.location)}</p></div><div><span>Phone</span><a href="tel:${escape(profile.phone)}">${escape(profile.phone)}</a></div></div>${profile.github || profile.linkedin ? `<div class="social-links">${profile.github ? external(profile.github, 'GitHub') : ''}${profile.linkedin ? external(profile.linkedin, 'LinkedIn') : ''}</div>` : ''}<p class="contact-note"><span class="status-dot"></span> Open to learning. Ready to contribute.</p></div></div></section>

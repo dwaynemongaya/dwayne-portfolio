@@ -53,13 +53,21 @@ Configuration references: [Vercel static project configuration](https://vercel.c
 - **`src/render.mjs`**: page markup and section order.
 - **`public/styles.css`**: colors, typography, spacing, responsive layouts, and motion preferences.
 - **`public/main.js`**: mobile menu and active navigation. Section links work without it.
+- **`public/theme.js`**: theme initialization, system preference tracking, and the navigation toggle.
 - **`public/assets/jobpath-poster.png`**: original, unedited JobPath poster.
+- **`public/assets/feutechlogo.png`** and **`public/assets/mclogo.png`**: original school logos, displayed on equal white backgrounds without cropping or recoloring.
 
-Keep optional GitHub, LinkedIn, project repository, and certificate URLs empty until actual links are supplied. They are omitted automatically. Replace project images in `public/assets/` and run the build again after edits. The build checks that the referenced project images exist.
+Keep optional GitHub, LinkedIn, project repository, and certificate URLs empty until actual links are supplied. They are omitted automatically. Replace images in `public/assets/` and run the build again after edits. The build checks that referenced project images and school logos exist. Education entries are an ordered array in `src/content.mjs`.
+
+## Light and dark mode
+
+The navigation's moon/sun button switches to the theme named in its accessible label. It remains visible when the mobile menu is closed. The first visit follows `prefers-color-scheme`, including later system changes until a manual selection is made. A manual selection is stored in localStorage under `portfolio-theme` and takes priority on later visits. Clearing that key restores system preference behavior. Theme selections also synchronize across tabs; if storage is blocked, the toggle still works for the current page.
+
+`public/theme.js` runs synchronously in the document head before the stylesheet and page content to prevent a flash of the wrong theme. It is an external script compatible with the existing Content Security Policy. Light and dark palette variables live at the top of `public/styles.css`. School logos and the JobPath poster retain their original colors in both themes.
 
 ## Source and content decisions
 
-All personal facts come from the supplied `Mongaya_Resume.pdf`. The supplied `JobPath_pic.png` is used only as the project's original visual; no skills, results, metrics, or technology claims were inferred from its artwork.
+Personal facts come from the supplied `Mongaya_Resume.pdf`, with the senior high school details supplied directly by Dwayne. The supplied `JobPath_pic.png` is used only as the project's original visual; no skills, results, metrics, or technology claims were inferred from its artwork.
 
 The resume download and education recognition are omitted at Dwayne's request. The resume PDF is not included in the public site assets.
 
@@ -70,6 +78,7 @@ The resume download and education recognition are omitted at Dwayne's request. T
 - The provided live JobPath URL is included. No GitHub profile, repository, LinkedIn, or certificate URLs were supplied.
 - Certification names and years are shown without invented issuers, credential IDs, or certificate links.
 - Experience dates and the education's `2023 – Present` wording follow the resume. No graduation date is inferred.
+- The college entry is followed by Meycauayan College, Inc., Senior High School, 2021–2023, with the Science, Technology, Engineering, and Mathematics (STEM) strand. Both school logos were supplied by Dwayne.
 - The full name, Manila location, email, and phone number follow the resume.
 - The poster retains its original proportions, colors, and appearance. Clicking it or **View full poster** opens the full original image in a new tab.
 
