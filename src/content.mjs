@@ -13,9 +13,10 @@ export const profile = {
   phone: '09279208107',
   introduction: 'I’m a graduating BS Computer Science student specializing in Data Science at FEU Institute of Technology, with academic and project-based experience in data analysis, machine learning, and web development.',
   goal: 'I’m seeking an internship where I can apply my foundational knowledge, contribute to real-world projects, and continue developing my technical and professional skills.',
+  resume: '/assets/Mongaya_Resume.pdf',
   // Add profile URLs only when supplied. Empty values do not produce links.
   github: '',
-  linkedin: '',
+  linkedin: 'https://www.linkedin.com/in/dwayne-mongaya-514000330',
 };
 
 export const skills = [

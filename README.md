@@ -55,9 +55,10 @@ Configuration references: [Vercel static project configuration](https://vercel.c
 - **`public/main.js`**: mobile menu and active navigation. Section links work without it.
 - **`public/theme.js`**: theme initialization, system preference tracking, and the navigation toggle.
 - **`public/assets/jobpath-poster.png`**: original, unedited JobPath poster.
+- **`public/assets/Mongaya_Resume.pdf`**: supplied resume, available from the profile's Download resume button.
 - **`public/assets/feutechlogo.png`** and **`public/assets/mclogo.png`**: original school logos, displayed on equal white backgrounds without cropping or recoloring.
 
-Keep optional GitHub, LinkedIn, project repository, and certificate URLs empty until actual links are supplied. They are omitted automatically. Replace images in `public/assets/` and run the build again after edits. The build checks that referenced project images and school logos exist. Education entries are an ordered array in `src/content.mjs`.
+Keep optional GitHub, project repository, and certificate URLs empty until actual links are supplied. They are omitted automatically. The supplied LinkedIn profile appears in Contact. Replace attachments in `public/assets/` and run the build again after edits. The build checks that the referenced resume, project images, and school logos exist. Education entries are an ordered array in `src/content.mjs`.
 
 ## Light and dark mode
 
@@ -69,13 +70,13 @@ The navigation's moon/sun button switches to the theme named in its accessible l
 
 Personal facts come from the supplied `Mongaya_Resume.pdf`, with the senior high school details supplied directly by Dwayne. The supplied `JobPath_pic.png` is used only as the project's original visual; no skills, results, metrics, or technology claims were inferred from its artwork.
 
-The resume download and education recognition are omitted at Dwayne's request. The resume PDF is not included in the public site assets.
+The supplied resume PDF is included as a download at Dwayne's request. Education recognition remains omitted. Decorative colored dots are removed throughout the interface; list items use neutral dashes.
 
 - The introduction is a concise paraphrase of the resume summary.
 - The page order is Profile, Skills, Projects, Experience, Certifications, Educational background, Contact.
 - JobPath is explicitly identified as a four-member team project. Its team outcome and Dwayne's contributions are described separately.
 - The resume names Codex in the project's development workflow. Its supplied `vercel.app` link identifies Vercel as the deployment platform. No framework or full stack is claimed because the resume does not specify one.
-- The provided live JobPath URL is included. No GitHub profile, repository, LinkedIn, or certificate URLs were supplied.
+- The provided live JobPath and LinkedIn profile URLs are included. No GitHub profile, repository, or certificate URLs were supplied.
 - Certification names and years are shown without invented issuers, credential IDs, or certificate links.
 - Experience dates and the education's `2023 – Present` wording follow the resume. No graduation date is inferred.
 - The college entry is followed by Meycauayan College, Inc., Senior High School, 2021–2023, with the Science, Technology, Engineering, and Mathematics (STEM) strand. Both school logos were supplied by Dwayne.
