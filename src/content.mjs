@@ -97,3 +97,12 @@ export const education = [{
   logoWidth: 239,
   logoHeight: 239,
 }];
+
+// Award photo and caption supplied directly by Dwayne.
+export const awards = [{
+  image: '/assets/best-thesis-award.jpeg',
+  imageAlt: 'Best Thesis certificate for Gray Men in Behavioral, Human, and Social Analytics at FEU Institute of Technology, 2026.',
+  imageWidth: 1144,
+  imageHeight: 1124,
+  caption: 'Best Thesis Award - Behavioral, Human, and Social Analytics | FEU Institute of Technology | 2026',
+}];

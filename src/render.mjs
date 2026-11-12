@@ -1,4 +1,4 @@
-import { profile, skills, projects, experience, certifications, education } from './content.mjs';
+import { profile, skills, projects, experience, certifications, education, awards } from './content.mjs';
 
 const escape = (value) => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const paths = {
@@ -90,6 +90,7 @@ export function render() {
     <section id="education" class="section container" aria-labelledby="education-title">
       ${heading('05', 'Educational background', '<span id="education-title">Where it all comes together</span>')}
       <div class="education-list">${education.map(school => `<article class="education-card"><div class="education-logo"><img src="${escape(school.logo)}" width="${school.logoWidth}" height="${school.logoHeight}" alt="${escape(school.logoAlt)}" loading="lazy" decoding="async"></div><div class="education-details"><p class="eyebrow">${escape(school.date)}</p><h3>${escape(school.school)}</h3><p class="degree">${escape(school.degree)}</p><p>${escape(school.specialization)}</p></div></article>`).join('')}</div>
+      ${awards.map(award => `<figure class="award-card"><a href="${escape(award.image)}" target="_blank" rel="noopener noreferrer" aria-label="View the full Best Thesis Award photo (opens in a new tab)"><img src="${escape(award.image)}" width="${award.imageWidth}" height="${award.imageHeight}" alt="${escape(award.imageAlt)}" loading="lazy" decoding="async"></a><figcaption>${escape(award.caption)}</figcaption></figure>`).join('')}
     </section>
 
     <section id="contact" class="contact-section" aria-labelledby="contact-title"><div class="container contact-inner"><div class="contact-main"><p class="eyebrow"><span class="section-number">06</span> Contact</p><h2 id="contact-title">Let’s build<br><span>what’s next</span></h2><p>${escape(profile.goal)}</p><a class="button button-light" href="mailto:${escape(profile.email)}">Let’s get in touch ${icon('arrow')}</a></div><div class="contact-details"><p class="contact-label">SAY HELLO</p><a class="contact-email" href="mailto:${escape(profile.email)}">${escape(profile.email)} ${icon('arrow')}</a><div class="contact-facts"><div><span>Based in</span><p>${escape(profile.location)}</p></div><div><span>Phone</span><a href="tel:${escape(profile.phone)}">${escape(profile.phone)}</a></div></div>${profile.github || profile.linkedin ? `<div class="social-links">${profile.github ? external(profile.github, 'GitHub') : ''}${profile.linkedin ? external(profile.linkedin, 'LinkedIn', 'text-link linkedin-link', 'linkedin') : ''}</div>` : ''}<p class="contact-note">Open to learning. Ready to contribute.</p></div></div></section>

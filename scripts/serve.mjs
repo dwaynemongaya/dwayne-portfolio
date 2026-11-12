@@ -7,7 +7,7 @@ import { render } from '../src/render.mjs';
 const preview = process.argv.includes('--preview');
 const root = fileURLToPath(new URL(preview ? '../dist/' : '../public/', import.meta.url));
 const port = Number(process.env.PORT || (preview ? 4173 : 5173));
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.pdf': 'application/pdf', '.txt': 'text/plain; charset=utf-8' };
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.pdf': 'application/pdf', '.txt': 'text/plain; charset=utf-8' };
 
 createServer(async (req, res) => {
   try {

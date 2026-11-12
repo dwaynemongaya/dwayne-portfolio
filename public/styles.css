@@ -225,6 +225,18 @@ h4 { font-size: 12px; font-weight: 700; margin-bottom: 8px; }
 .education-details h3 { font-size: 16px; margin-top: 7px; line-height: 1.5; font-weight: 600; }
 .education-details > p:not(.eyebrow) { font-size: 12px; color: var(--muted); line-height: 1.9; }
 .education-details .degree { margin-top: 8px; }
+.award-card { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); align-items: center; gap: 32px; margin: 24px 0 0; padding: 24px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); }
+.award-card a { display: block; min-width: 0; }
+.award-card img { width: 100%; height: auto; border-radius: 4px; }
+.award-card figcaption { font-size: 18px; font-weight: 600; line-height: 1.7; overflow-wrap: anywhere; }
+@media (max-width: 800px) {
+  .award-card { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .award-card img { max-width: 480px; margin-inline: auto; }
+  .award-card figcaption { font-size: 15px; }
+}
+@media (max-width: 500px) {
+  .award-card { padding: 15px; }
+}
 .contact-section { margin-top: 105px; background: var(--contact-background); color: #f8f8f8; padding: 66px 0; }
 .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 110px; align-items: center; }
 .contact-section .eyebrow { color: #d1dfe5; }

@@ -56,9 +56,10 @@ Configuration references: [Vercel static project configuration](https://vercel.c
 - **`public/theme.js`**: theme initialization, system preference tracking, and the navigation toggle.
 - **`public/assets/jobpath-poster.png`**: original, unedited JobPath poster.
 - **`public/assets/Mongaya_Resume.pdf`**: supplied resume, available from the profile's Download resume button.
+- **`public/assets/best-thesis-award.jpeg`**: original award photo with Dwayne's exact caption, shown under Education and viewable at full size.
 - **`public/assets/feutechlogo.png`** and **`public/assets/mclogo.png`**: original school logos, displayed on equal white backgrounds without cropping or recoloring.
 
-Keep optional GitHub, project repository, and certificate URLs empty until actual links are supplied. They are omitted automatically. The supplied LinkedIn profile appears in Contact. Replace attachments in `public/assets/` and run the build again after edits. The build checks that the referenced resume, project images, and school logos exist. Education entries are an ordered array in `src/content.mjs`.
+Keep optional GitHub, project repository, and certificate URLs empty until actual links are supplied. They are omitted automatically. The supplied LinkedIn profile appears in Contact. Replace attachments in `public/assets/` and run the build again after edits. The build checks that the referenced resume, project images, school logos, and award photos exist. Education entries are an ordered array in `src/content.mjs`.
 
 ## Light and dark mode
 
@@ -70,7 +71,7 @@ The navigation's moon/sun button switches to the theme named in its accessible l
 
 Personal facts come from the supplied `Mongaya_Resume.pdf`, with the senior high school details supplied directly by Dwayne. The supplied `JobPath_pic.png` is used only as the project's original visual; no skills, results, metrics, or technology claims were inferred from its artwork.
 
-The supplied resume PDF is included as a download at Dwayne's request. Education recognition remains omitted. Decorative colored dots are removed throughout the interface; list items use neutral dashes.
+The supplied resume PDF is included as a download at Dwayne's request and was replaced with the updated file supplied on November 12, 2026. The Best Thesis Award photo and caption were supplied directly by Dwayne and are stored in the `awards` array in `src/content.mjs`. Dean's Lister recognition remains omitted. Decorative colored dots are removed throughout the interface; list items use neutral dashes.
 
 - The introduction is a concise paraphrase of the resume summary.
 - The page order is Profile, Skills, Projects, Experience, Certifications, Educational background, Contact.
