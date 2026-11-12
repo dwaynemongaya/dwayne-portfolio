@@ -31,7 +31,7 @@ export const projects = [{
   category: 'Web application · Team project',
   purpose: 'Helping students and recent graduates discover their career path.',
   description: 'A web-based career recommendation platform for students and recent graduates, developed and deployed with a four-member team.',
-  teamOutcome: 'Together, our four-member team developed and deployed the JobPath platform.',
+  teamOutcome: 'Our four-member team, Gray Men, developed and deployed the JobPath platform.',
   contributions: [
     'Contributed to interface design, feature implementation, and application workflows.',
     'Supported testing, debugging, research, and technical documentation.',
