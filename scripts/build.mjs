@@ -1,12 +1,12 @@
 import { cp, mkdir, writeFile, rm, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { render } from '../src/render.mjs';
-import { profile, projects, education, awards } from '../src/content.mjs';
+import { profile, projects, education } from '../src/content.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = new URL('../dist/', import.meta.url);
 // Catch missing supplied attachments before producing a deployable artifact.
-for (const asset of [profile.resume, ...projects.map(project => project.image), ...education.map(school => school.logo), ...awards.map(award => award.image)].filter(Boolean)) {
+for (const asset of [profile.resume, ...projects.map(project => project.image), ...education.map(school => school.logo), ...projects.flatMap(project => (project.awards || []).map(award => award.image))].filter(Boolean)) {
   await access(`${root}public${asset}`);
 }
 await rm(output, { recursive: true, force: true });

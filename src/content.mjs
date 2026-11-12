@@ -46,6 +46,14 @@ export const projects = [{
   imageWidth: 1044,
   imageHeight: 1218,
   imageAlt: 'Original JobPath poster: Discover Your Career Path, showing skill assessment, career exploration, gap identification, and career mapping.',
+  // Award photo, caption, and connection to JobPath supplied by Dwayne.
+  awards: [{
+    image: '/assets/best-thesis-award.jpeg',
+    imageAlt: 'Best Thesis certificate for the JobPath system by Gray Men in Behavioral, Human, and Social Analytics at FEU Institute of Technology, 2026.',
+    imageWidth: 1144,
+    imageHeight: 1124,
+    caption: 'Best Thesis Award - Behavioral, Human, and Social Analytics | FEU Institute of Technology | 2026',
+  }],
 }];
 
 export const experience = [
@@ -96,13 +104,4 @@ export const education = [{
   logoAlt: 'Meycauayan College, Inc. logo',
   logoWidth: 239,
   logoHeight: 239,
-}];
-
-// Award photo and caption supplied directly by Dwayne.
-export const awards = [{
-  image: '/assets/best-thesis-award.jpeg',
-  imageAlt: 'Best Thesis certificate for Gray Men in Behavioral, Human, and Social Analytics at FEU Institute of Technology, 2026.',
-  imageWidth: 1144,
-  imageHeight: 1124,
-  caption: 'Best Thesis Award - Behavioral, Human, and Social Analytics | FEU Institute of Technology | 2026',
 }];
