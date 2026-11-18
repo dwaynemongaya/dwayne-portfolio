@@ -2,6 +2,11 @@
 // It stays external so the site's Content Security Policy needs no inline code.
 (() => {
   const root = document.documentElement;
+  // Select a view before body paint, just as we do for the theme.
+  const views = ['home', 'about', 'projects', 'skills', 'certifications', 'contact'];
+  const aliases = { profile: 'home', education: 'about', experience: 'about' };
+  const requested = location.hash.slice(1).split('/')[0];
+  root.dataset.view = aliases[requested] || (views.includes(requested) ? requested : 'home');
   const storageKey = 'portfolio-theme';
   const system = window.matchMedia('(prefers-color-scheme: dark)');
   let selection = readSelection();

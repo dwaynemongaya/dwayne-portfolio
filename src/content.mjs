@@ -7,6 +7,7 @@ export const profile = {
   secondLine: 'M. Mongaya',
   initials: 'dm',
   role: 'Graduating Computer Science student',
+  homeIntroduction: 'I’m a graduating Computer Science student specializing in Data Science at FEU Institute of Technology, with academic and project experience in data analysis, machine learning, and web development.',
   specialization: 'Data Science',
   location: 'Manila, Philippines',
   email: 'dwayne.mongaya24@gmail.com',
@@ -27,6 +28,7 @@ export const skills = [
 ];
 
 export const projects = [{
+  id: 'jobpath',
   name: 'JobPath',
   category: 'Web application · Team project',
   purpose: 'Helping students and recent graduates discover their career path.',
@@ -37,11 +39,21 @@ export const projects = [{
     'Supported testing, debugging, research, and technical documentation.',
     'Used Codex to generate, review, and troubleshoot code, then tested and refined the implementation.',
   ],
-  // The resume identifies Codex, but does not specify a framework or full stack.
-  // The supplied project's vercel.app URL confirms its deployment platform.
-  technologies: ['Codex · AI-assisted development', 'Vercel · Deployment'],
+  // Stack verified against the repository supplied by Dwayne on Nov 18, 2026.
+  technologies: ['React', 'TypeScript', 'Python', 'MongoDB'],
+  stack: [
+    { label: 'Frontend', tools: 'React, TypeScript, Tailwind CSS, Vite' },
+    { label: 'Backend', tools: 'Node.js, Express, TypeScript' },
+    { label: 'Database', tools: 'MongoDB' },
+    { label: 'ML service', tools: 'Python, FastAPI, scikit-learn, NumPy' },
+  ],
+  stackSources: [
+    'https://github.com/Neater17/jobpath/blob/main/frontend/package.json',
+    'https://github.com/Neater17/jobpath/blob/main/backend/package.json',
+    'https://github.com/Neater17/jobpath/blob/main/Python/requirements.txt',
+  ],
   url: 'https://jobpath-graymen.vercel.app/',
-  github: '',
+  github: 'https://github.com/Neater17/jobpath',
   image: '/assets/jobpath-poster.png',
   imageWidth: 1044,
   imageHeight: 1218,
@@ -79,11 +91,30 @@ export const experience = [
   },
 ];
 
+// Displayed from oldest to newest issue/exam date.
 export const certifications = [
-  { name: 'PMI Project Management Ready', year: '2026', url: '' },
-  { name: 'IT Specialist - Python', year: '2025', url: '' },
-  { name: 'CCNA: Introduction to Networks', year: '2025', url: '' },
-  { name: 'Linux Essentials', year: '2025', url: '' },
+  {
+    id: 'linux', name: 'Linux Essentials', category: 'Operating systems',
+    year: '2025', date: 'March 23, 2025', issuer: 'Cisco Networking Academy · NDG', kind: 'Statement of achievement',
+    description: 'Statement of achievement for completing Linux Essentials through Cisco Networking Academy in collaboration with NDG.',
+    metadata: [{ label: 'Document', value: 'Statement of achievement' }],
+    image: '/assets/certificates/linux.jpg', pdf: '/assets/certificates/linux.pdf', width: 1500, height: 1159,
+  },
+  {
+    id: 'python', name: 'Information Technology Specialist — Python', category: 'Programming',
+    year: '2025', date: 'July 16, 2025', issuer: 'Certiport · Pearson VUE', kind: 'Specialist certification',
+    description: 'Credential in Python programming, awarded after meeting the Information Technology Specialist certification requirements.',
+    metadata: [{ label: 'Validity on document', value: 'Five years from the issue date' }, { label: 'Verification code', value: 'wqW8Q-2FvW' }],
+    verificationUrl: 'https://verify.certiport.com/', verificationLabel: 'Certiport verification',
+    image: '/assets/certificates/python.jpg', pdf: '/assets/certificates/python.pdf', width: 1500, height: 1159,
+  },
+  {
+    id: 'ccna', name: 'CCNA: Introduction to Networks', category: 'Networking',
+    year: '2025', date: 'August 2, 2025', issuer: 'Cisco Networking Academy', kind: 'Certificate of course completion',
+    description: 'Certificate of course completion for CCNA: Introduction to Networks through Cisco Networking Academy.',
+    metadata: [{ label: 'Document', value: 'Certificate of course completion' }],
+    image: '/assets/certificates/ccna.jpg', pdf: '/assets/certificates/ccna.pdf', width: 1500, height: 1159,
+  },
 ];
 
 export const education = [{
@@ -95,13 +126,4 @@ export const education = [{
   logoAlt: 'FEU Institute of Technology logo',
   logoWidth: 200,
   logoHeight: 200,
-}, {
-  school: 'Meycauayan College, Inc.',
-  degree: 'Senior High School',
-  specialization: 'Science, Technology, Engineering, and Mathematics (STEM)',
-  date: '2021–2023',
-  logo: '/assets/mclogo.png',
-  logoAlt: 'Meycauayan College, Inc. logo',
-  logoWidth: 239,
-  logoHeight: 239,
 }];
