@@ -32,6 +32,8 @@ export const projects = [{
   name: 'JobPath',
   category: 'Web application · Team project',
   purpose: 'Helping students and recent graduates discover their career path.',
+  summary: 'Career recommendations for students and recent graduates.',
+  imageLabel: 'Original JobPath poster',
   description: 'A web-based career recommendation platform for students and recent graduates, developed and deployed with a four-member team.',
   teamOutcome: 'Our four-member team, Gray Men, developed and deployed the JobPath platform.',
   contributions: [
@@ -66,6 +68,48 @@ export const projects = [{
     imageHeight: 1124,
     caption: 'Best Thesis Award - Behavioral, Human, and Social Analytics | FEU Institute of Technology | 2026',
   }],
+}, {
+  id: 'expense',
+  name: 'Expense',
+  category: 'Web application · Personal finance',
+  purpose: 'A clearer view of everyday spending and monthly budgets.',
+  summary: 'Expense tracking, budgets, and spending insights in one dashboard.',
+  description: 'A personal expense analyzer for recording expenses, setting monthly budgets, and reviewing spending over time. The dashboard brings together daily spending, category breakdowns, recent expenses, and monthly comparisons.',
+  // Verified against the existing Personal_Expense_Analyzer project files.
+  technologies: ['React', 'Python', 'FastAPI', 'Supabase'],
+  stack: [
+    { label: 'Frontend', tools: 'React, JavaScript, Vite' },
+    { label: 'Backend', tools: 'Python, FastAPI' },
+    { label: 'Data & authentication', tools: 'Supabase Auth, PostgreSQL' },
+  ],
+  url: 'https://personal-expense-analyzer-ashen.vercel.app/',
+  image: '/assets/expense-dashboard.png',
+  imageLayout: 'landscape',
+  imageWidth: 2798,
+  imageHeight: 1612,
+  imageLabel: 'Expense dashboard screenshot',
+  imageAlt: 'Expense personal analyzer dashboard with monthly totals, budget cards, daily spending, and spending by category.',
+}, {
+  id: 'rowcheck',
+  name: 'RowCheck',
+  category: 'Web application · Data quality',
+  purpose: 'Check CSV data quality before taking the next step.',
+  summary: 'CSV validation, configurable rules, and clear issue reports.',
+  description: 'A CSV data quality analyzer for previewing original values, configuring validation rules, and reviewing records that need attention. It checks required values, number and date formats, ranges, and duplicates, with filters for reviewing issues and a downloadable CSV report.',
+  // Verified against the existing RowCheck project files.
+  technologies: ['React', 'TypeScript', 'Python', 'pandas'],
+  stack: [
+    { label: 'Frontend', tools: 'React, TypeScript, Vite' },
+    { label: 'Backend', tools: 'Python, FastAPI' },
+    { label: 'Data validation', tools: 'pandas, configurable validation rules' },
+  ],
+  url: 'https://rowcheck.vercel.app/',
+  image: '/assets/rowcheck-dashboard.png',
+  imageLayout: 'landscape',
+  imageWidth: 2872,
+  imageHeight: 1530,
+  imageLabel: 'RowCheck CSV analyzer screenshot',
+  imageAlt: 'RowCheck CSV analyzer with upload, configure rules, and review results steps above a preview of uploaded data.',
 }];
 
 export const experience = [

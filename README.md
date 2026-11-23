@@ -26,14 +26,14 @@ Open **http://localhost:4173**. Stop a server with Ctrl+C. Set `PORT` to use ano
 
 The blue navigation links select **Home, About, Projects, Skills, Certifications, Contact**. Each view has a shareable hash URL, supports browser back/forward navigation, and updates the active link, page title, and heading focus. A small script chooses the initial view before body paint. Home is a compact viewport layout; content remains scrollable on unusually short displays or at increased text zoom so nothing is clipped.
 
-- **Home:** brief resume-based introduction, resume download, Manila location, the decorative “THE INTERSECTION OF” monogram graphic, and a larger JobPath shortcut.
+- **Home:** brief resume-based introduction, resume download, Manila location, the decorative “THE INTERSECTION OF” monogram graphic, and JobPath, Expense, and RowCheck shortcuts with blue View Project controls.
 - **About:** background, FEU college education, and both resume-based experience entries. Senior high school and Dean's Lister recognition are omitted at Dwayne's request. No birthday is shown.
-- **Projects:** concise JobPath overview and verified stack, with supplied code/site links. Selecting the project opens an accessible native dialog with detailed team and individual contributions. The blue **Best Thesis Award — Click To View** panel reveals the original award photo and exact supplied caption.
+- **Projects:** JobPath, Expense, and RowCheck overviews with concise captions, verified project technologies, and supplied website links. Code links are omitted. Selecting the project opens an accessible native dialog with detailed team and individual contributions. The blue **Best Thesis Award — Click To View** panel reveals the original award photo and exact supplied caption.
 - **Skills:** four grouped toolkit cards with colored rectangular skill rows and a restrained hover glow. Programming is blue, Data Science green, development tools blue-gray, and AI tools warm sand. No proficiency scores or skill-row arrows are shown.
 - **Certifications:** full-width document rows with category, title, issuer, description, and document metadata on the left, and a complete preview on the right. Rows stack on phones. Each document has Download PDF, Open original PDF, and Enlarge certificate controls; enlargement opens the full-screen viewer.
 - **Contact:** working email, phone, LinkedIn, and Manila location.
 
-The footer contains only the logo, full name, and Computer Science / Data Science identity. The decorative `dm` hero illustration is restored. The companion picker and cursor-following behavior have been removed.
+The footer contains the logo, full name, Computer Science / Data Science identity, and supplied email, phone, and LinkedIn contact links. The decorative `dm` hero illustration is restored. The companion picker and cursor-following behavior have been removed.
 
 ## Light and dark mode
 
@@ -50,6 +50,8 @@ The navigation's moon/sun button names the action in its accessible label. The f
 - `public/styles.css`: both palettes, layout, responsive states, and focus styles.
 - `public/assets/Mongaya_Resume.pdf`: original supplied resume, updated November 12, 2026.
 - `public/assets/jobpath-poster.png`: original JobPath poster.
+- `public/assets/rowcheck-dashboard.png`: original RowCheck screenshot supplied November 22, 2026; preserved at 2872 × 1530 without cropping or blue padding.
+- `public/assets/expense-dashboard.png`: original Expense screenshot supplied November 21, 2026; preserved at 2798 × 1612 with full-size viewing available.
 - `public/assets/best-thesis-award.jpeg`: original team award photo.
 - `public/assets/feutechlogo.png`: supplied FEU logo, displayed without cropping on white backing.
 - `public/assets/certificates/`: original PDFs and JPEG previews rendered from their complete first pages.
@@ -63,6 +65,10 @@ Personal claims and individual contributions come from the supplied resume and D
 > Best Thesis Award - Behavioral, Human, and Social Analytics | FEU Institute of Technology | 2026
 
 Dwayne supplied the [JobPath repository](https://github.com/Neater17/jobpath) on November 18, 2026. The stack was verified using its [frontend manifest](https://github.com/Neater17/jobpath/blob/main/frontend/package.json), [backend manifest](https://github.com/Neater17/jobpath/blob/main/backend/package.json), and [Python requirements](https://github.com/Neater17/jobpath/blob/main/Python/requirements.txt). Those sources establish the project's technologies; they do not establish new individual skills or additional contributions.
+
+Expense’s caption describes the supplied dashboard screenshot: expense tracking, monthly budgets, and spending insights. The React/Vite frontend, Python/FastAPI backend, and Supabase Auth/PostgreSQL stack were verified against the existing `Personal_Expense_Analyzer` source project. No individual contributions or outcomes were inferred.
+
+RowCheck’s caption describes CSV preview, configurable validation, and issue reports. Its React/TypeScript/Vite frontend and Python/FastAPI/pandas stack were verified against the existing `RowCheck` project files. Landscape screenshots use their natural proportions in project previews and full-size viewing remains available.
 
 The certificate attachment dates remain the actual issue/exam dates, rather than the newer download filenames: Python — July 16, 2025; CCNA course — August 2, 2025; Linux course — March 23, 2025. The original PDFs are included for viewing. Python validity and verification code are transcribed from Dwayne’s own document (five years from issue; `wqW8Q-2FvW`). Its verification link uses the `verify.certiport.com` address printed on that document. No dates, names, or codes were copied from the layout reference.
 
