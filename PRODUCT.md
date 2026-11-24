@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML/CSS/JS with vendored GSAP and Lenis (chosen by Dwayne, Nov 25 2026). New design lives in `v2/`; the original site in `src/` + `public/` is untouched.
+Static HTML/CSS/JS with vendored GSAP and Lenis (chosen by Dwayne, Nov 25 2026). The site lives in `public/`. The earlier site (src/ + build script) is in git history before the v2 commit.
 
 ## Users
 
@@ -35,7 +35,7 @@ Name shown as "Dwayne Mongaya" in the intro; full name "Dwayne Carmelo M. Mongay
 
 ## Evidence on Hand
 
-Resume PDF, three project screenshots/poster, award photo, three certificate PDFs and previews, FEU logo (all copied into `v2/assets`).
+Resume PDF, three project screenshots/poster, award photo, three certificate PDFs and previews, FEU logo (all in `public/assets`).
 
 ## Accessibility & Inclusion
 
