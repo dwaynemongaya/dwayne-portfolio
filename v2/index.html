@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dwayne Mongaya — Computer Science · Data Science</title>
+  <meta name="description" content="Portfolio of Dwayne Carmelo M. Mongaya, a graduating Computer Science student specializing in Data Science at FEU Institute of Technology.">
+  <meta name="theme-color" content="#0d0908">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/dwayne-cutout.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+  <script src="boot.js"></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.6v.01M12 16v-5.5m0 2.5a2.8 2.8 0 0 1 5.6 0V16"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4ZM8 6H4v1a4 4 0 0 0 4 4M16 6h4v1a4 4 0 0 1-4 4M12 13v4M8 20h8M10 17h4"/></symbol>
+</svg>
+
+<a class="skip" href="#about">Skip to content</a>
+
+<!-- Intro: two doors split open from the seam. Plays once per page load; section navigation never touches it. -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="door door-l"><p class="intro-name">Dwayne Mongaya</p></div>
+  <div class="door door-r"><p class="intro-name">Dwayne Mongaya</p></div>
+  <span class="seam"></span>
+</div>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="logo" href="#home" data-nav aria-label="Dwayne Mongaya, back to top">DM<span>.</span></a>
+  <nav class="menu" id="menu" aria-label="Sections">
+    <span class="menu-pill" id="menuPill" aria-hidden="true"></span>
+    <a href="#about" data-nav>About</a>
+    <a href="#projects" data-nav>Projects</a>
+    <a href="#skills" data-nav>Skills</a>
+    <a href="#certification" data-nav>Certification</a>
+    <a href="#contact" data-nav>Contact</a>
+  </nav>
+  <a class="btn btn-line mag topbar-cta" href="assets/Mongaya_Resume.pdf" download>
+    <svg class="ic"><use href="#i-download"/></svg><span>Resume</span>
+  </a>
+</header>
+
+<main id="top">
+
+  <!-- HOME -->
+  <div class="hwrap" id="hwrap">
+    <section class="hero" id="home" aria-label="Home">
+      <div class="hero-back" id="heroBack">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <canvas class="burst" id="burst" aria-hidden="true"></canvas>
+      </div>
+      <div class="hero-word" id="heroWord">
+        <h1 class="hero-name" id="heroName"><span class="hk">Dwayne</span><span class="hb">Mongaya</span></h1>
+      </div>
+      <img class="portrait" id="portrait" src="assets/dwayne-cutout.webp" width="840" height="1530" alt="Portrait of Dwayne Mongaya with arms crossed" fetchpriority="high" decoding="async">
+      <div class="hero-copy" id="heroCopy">
+        <p class="hero-role">Graduating Computer Science student · Data Science</p>
+        <p class="hero-intro">Academic and project experience in data analysis, machine learning, and web development, at FEU Institute of Technology.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid mag" href="#projects" data-nav><span>View projects</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-line mag" href="#contact" data-nav><span>Get in touch</span></a>
+        </div>
+        <p class="hero-meta"><svg class="ic"><use href="#i-pin"/></svg>Manila, Philippines</p>
+      </div>
+      <ul class="hero-caps">
+        <li><span class="mi">Data Science<br>specialization</span></li>
+        <li><span class="mi">Machine learning<br>at FlyRank AI</span></li>
+        <li><span class="mi">Best Thesis Award<br>FEU Tech, 2026</span></li>
+      </ul>
+      <p class="hero-hint" aria-hidden="true"><span class="h-fine">Move your cursor. Click to detonate.</span><span class="h-coarse">Drag or tap the burst.</span></p>
+    </section>
+  </div>
+  <div class="hz" id="hz" aria-hidden="true"></div>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about" aria-labelledby="about-h">
+    <div class="wrap about-grid">
+      <div class="about-pin">
+        <h2 class="h-xl split" id="about-h">Data, machine learning, and the web.</h2>
+        <article class="edu reveal">
+          <img class="edu-logo" src="assets/feutechlogo.png" width="200" height="200" alt="FEU Institute of Technology logo" loading="lazy">
+          <div>
+            <h3>Far Eastern University Institute of Technology</h3>
+            <p>Bachelor of Science in Computer Science</p>
+            <p class="muted">Specialization in Data Science · 2023 – Present</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="about-col">
+        <p class="lead reveal">I’m a graduating BS Computer Science student specializing in Data Science at FEU Institute of Technology, with academic and project-based experience in data analysis, machine learning, and web development.</p>
+        <p class="body reveal">I’m seeking an internship where I can apply my foundational knowledge, contribute to real-world projects, and continue developing my technical and professional skills.</p>
+        <div class="about-actions reveal">
+          <a class="btn btn-solid mag" href="assets/Mongaya_Resume.pdf" download><svg class="ic"><use href="#i-download"/></svg><span>Download resume</span></a>
+          <a class="btn btn-line mag" href="#contact" data-nav><span>Contact me</span></a>
+        </div>
+
+        <ul class="nums" aria-label="At a glance">
+          <li><span class="n" data-count="3">3</span><span class="c">Web projects built<br><em>JobPath, Expense, RowCheck</em></span></li>
+          <li><span class="n" data-count="3">3</span><span class="c">Certifications<br><em>Linux, Python, CCNA</em></span></li>
+          <li><span class="n" data-count="2">2</span><span class="c">Work experiences<br><em>FlyRank AI, OSCA Meycauayan</em></span></li>
+          <li><span class="n" data-count="1">1</span><span class="c">Best Thesis Award<br><em>FEU Institute of Technology, 2026</em></span></li>
+        </ul>
+
+        <ol class="timeline" aria-label="Experience">
+          <li class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <p class="tl-date">July 2026 – August 2026</p>
+            <h3>Machine Learning Engineering Intern</h3>
+            <p class="tl-org">FlyRank AI · Remote</p>
+            <ul>
+              <li>Practiced basic machine learning and data preparation using messy datasets.</li>
+              <li>Studied joins, aggregation, embeddings, clustering, and intent modeling to analyze search queries.</li>
+            </ul>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <p class="tl-date">May 2023</p>
+            <h3>Work Immersion Trainee</h3>
+            <p class="tl-org">Office of the Senior Citizens Affairs (OSCA) · City Government of Meycauayan</p>
+            <ul>
+              <li>Encoded, organized, and verified senior citizen records in Microsoft Excel while maintaining data accuracy.</li>
+              <li>Created Excel drop-down lists and data-validation rules to standardize entries, reduce input errors, and improve data-entry efficiency.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="sec projects" id="projects" aria-labelledby="projects-h">
+    <div class="wrap projects-head">
+      <h2 class="h-xl split" id="projects-h">Things I’ve built.</h2>
+      <p class="body reveal">Three web applications: one shipped with a team, two on my own. Each links to the live site.</p>
+    </div>
+
+    <div class="stack">
+      <!-- JobPath -->
+      <article class="proj" id="jobpath" aria-labelledby="jobpath-h">
+        <div class="proj-in">
+          <div class="proj-text">
+            <h3 class="h-lg" id="jobpath-h">JobPath</h3>
+            <p class="proj-cat">Web application · Team project</p>
+            <p class="proj-desc">A web-based career recommendation platform for students and recent graduates, developed and deployed with a four-member team. Our team, Gray Men, built it end to end.</p>
+            <ul class="proj-points">
+              <li>Contributed to interface design, feature implementation, and application workflows.</li>
+              <li>Supported testing, debugging, research, and technical documentation.</li>
+              <li>Used Codex to generate, review, and troubleshoot code, then tested and refined the implementation.</li>
+            </ul>
+            <dl class="stack-list">
+              <div><dt>Frontend</dt><dd>React, TypeScript, Tailwind CSS, Vite</dd></div>
+              <div><dt>Backend</dt><dd>Node.js, Express, TypeScript</dd></div>
+              <div><dt>Database</dt><dd>MongoDB</dd></div>
+              <div><dt>ML service</dt><dd>Python, FastAPI, scikit-learn, NumPy</dd></div>
+            </dl>
+            <div class="proj-actions">
+              <a class="btn btn-solid mag" href="https://jobpath-graymen.vercel.app/" target="_blank" rel="noopener"><span>Visit JobPath</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+              <button class="btn btn-award mag" type="button" data-view="assets/best-thesis-award.jpeg" data-alt="Best Thesis certificate for the JobPath system by Gray Men in Behavioral, Human, and Social Analytics at FEU Institute of Technology, 2026." data-caption="Best Thesis Award - Behavioral, Human, and Social Analytics | FEU Institute of Technology | 2026"><svg class="ic"><use href="#i-trophy"/></svg><span>Best Thesis Award — click to view</span></button>
+            </div>
+          </div>
+          <figure class="proj-media poster">
+            <button class="frame" type="button" data-view="assets/jobpath-poster.png" data-alt="Original JobPath poster: Discover Your Career Path, showing skill assessment, career exploration, gap identification, and career mapping." data-caption="JobPath poster" aria-label="Enlarge JobPath poster">
+              <img src="assets/jobpath-poster.webp" width="1044" height="1218" alt="Original JobPath poster: Discover Your Career Path, showing skill assessment, career exploration, gap identification, and career mapping." loading="lazy">
+              <span class="frame-tag"><svg class="ic"><use href="#i-expand"/></svg>Enlarge</span>
+            </button>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Expense -->
+      <article class="proj" id="expense" aria-labelledby="expense-h">
+        <div class="proj-in">
+          <div class="proj-text">
+            <h3 class="h-lg" id="expense-h">Expense</h3>
+            <p class="proj-cat">Web application · Personal finance</p>
+            <p class="proj-desc">A personal expense analyzer for recording expenses, setting monthly budgets, and reviewing spending over time. The dashboard brings together daily spending, category breakdowns, recent expenses, and monthly comparisons.</p>
+            <dl class="stack-list">
+              <div><dt>Frontend</dt><dd>React, JavaScript, Vite</dd></div>
+              <div><dt>Backend</dt><dd>Python, FastAPI</dd></div>
+              <div><dt>Data &amp; authentication</dt><dd>Supabase Auth, PostgreSQL</dd></div>
+            </dl>
+            <div class="proj-actions">
+              <a class="btn btn-solid mag" href="https://personal-expense-analyzer-ashen.vercel.app/" target="_blank" rel="noopener"><span>Visit Expense</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+          <figure class="proj-media wide">
+            <button class="frame" type="button" data-view="assets/expense-dashboard.png" data-alt="Expense personal analyzer dashboard with monthly totals, budget cards, daily spending, and spending by category." data-caption="Expense dashboard" aria-label="Enlarge Expense dashboard screenshot">
+              <span class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><em>personal-expense-analyzer-ashen.vercel.app</em></span>
+              <img src="assets/expense-dashboard.webp" width="1600" height="922" alt="Expense personal analyzer dashboard with monthly totals, budget cards, daily spending, and spending by category." loading="lazy">
+              <span class="frame-tag"><svg class="ic"><use href="#i-expand"/></svg>Enlarge</span>
+            </button>
+          </figure>
+        </div>
+      </article>
+
+      <!-- RowCheck -->
+      <article class="proj" id="rowcheck" aria-labelledby="rowcheck-h">
+        <div class="proj-in">
+          <div class="proj-text">
+            <h3 class="h-lg" id="rowcheck-h">RowCheck</h3>
+            <p class="proj-cat">Web application · Data quality</p>
+            <p class="proj-desc">A CSV data quality analyzer for previewing original values, configuring validation rules, and reviewing records that need attention. It checks required values, number and date formats, ranges, and duplicates, with filters for reviewing issues and a downloadable CSV report.</p>
+            <dl class="stack-list">
+              <div><dt>Frontend</dt><dd>React, TypeScript, Vite</dd></div>
+              <div><dt>Backend</dt><dd>Python, FastAPI</dd></div>
+              <div><dt>Data validation</dt><dd>pandas, configurable validation rules</dd></div>
+            </dl>
+            <div class="proj-actions">
+              <a class="btn btn-solid mag" href="https://rowcheck.vercel.app/" target="_blank" rel="noopener"><span>Visit RowCheck</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+          <figure class="proj-media wide">
+            <button class="frame" type="button" data-view="assets/rowcheck-dashboard.png" data-alt="RowCheck CSV analyzer with upload, configure rules, and review results steps above a preview of uploaded data." data-caption="RowCheck CSV analyzer" aria-label="Enlarge RowCheck screenshot">
+              <span class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><em>rowcheck.vercel.app</em></span>
+              <img src="assets/rowcheck-dashboard.webp" width="1600" height="852" alt="RowCheck CSV analyzer with upload, configure rules, and review results steps above a preview of uploaded data." loading="lazy">
+              <span class="frame-tag"><svg class="ic"><use href="#i-expand"/></svg>Enlarge</span>
+            </button>
+          </figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="sec skills" id="skills" aria-labelledby="skills-h">
+    <div class="wrap">
+      <h2 class="h-xl split" id="skills-h">My toolkit.</h2>
+      <div class="skill-rows">
+        <div class="skill-row reveal">
+          <h3>Programming</h3>
+          <ul><li>Python</li><li>Java</li><li>SQL</li><li>HTML / CSS</li></ul>
+        </div>
+        <div class="skill-row reveal">
+          <h3>Data Science</h3>
+          <ul><li>Jupyter Notebook</li><li>Google Colab</li><li>NumPy</li><li>Pandas</li></ul>
+        </div>
+        <div class="skill-row reveal">
+          <h3>Development tools</h3>
+          <ul><li>Visual Studio Code</li><li>Git</li><li>GitHub</li><li>Vercel</li></ul>
+        </div>
+        <div class="skill-row reveal">
+          <h3>AI tools</h3>
+          <ul><li>ChatGPT</li><li>Claude AI</li><li>Gemini</li><li>Codex</li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marquee">
+        <span>Python</span><span>Java</span><span>SQL</span><span>HTML / CSS</span><span>Jupyter Notebook</span><span>Google Colab</span><span>NumPy</span><span>Pandas</span><span>Visual Studio Code</span><span>Git</span><span>GitHub</span><span>Vercel</span><span>ChatGPT</span><span>Claude AI</span><span>Gemini</span><span>Codex</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATION -->
+  <section class="sec certs" id="certification" aria-labelledby="certs-h">
+    <div class="wrap">
+      <h2 class="h-xl split" id="certs-h">Certifications.</h2>
+
+      <article class="cert reveal" aria-labelledby="c-linux">
+        <button class="cert-img" type="button" data-view="assets/certificates/linux.jpg" data-alt="Linux Essentials statement of achievement" data-caption="Linux Essentials · Statement of achievement" aria-label="Enlarge Linux Essentials certificate">
+          <img src="assets/certificates/linux.jpg" width="1500" height="1159" alt="Linux Essentials statement of achievement from Cisco Networking Academy" loading="lazy">
+        </button>
+        <div class="cert-text">
+          <p class="cert-cat">Operating systems · March 23, 2025</p>
+          <h3 id="c-linux">Linux Essentials</h3>
+          <p class="cert-issuer">Cisco Networking Academy · NDG</p>
+          <p>Statement of achievement for completing Linux Essentials through Cisco Networking Academy in collaboration with NDG.</p>
+          <div class="cert-actions">
+            <button class="btn btn-ink" type="button" data-view="assets/certificates/linux.jpg" data-alt="Linux Essentials statement of achievement" data-caption="Linux Essentials · Statement of achievement"><svg class="ic"><use href="#i-expand"/></svg><span>Enlarge</span></button>
+            <a class="btn btn-ink-line" href="assets/certificates/linux.pdf" download><svg class="ic"><use href="#i-download"/></svg><span>Download PDF</span></a>
+            <a class="btn btn-ink-line" href="assets/certificates/linux.pdf" target="_blank" rel="noopener"><span>Open original PDF</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="cert flip reveal" aria-labelledby="c-python">
+        <button class="cert-img" type="button" data-view="assets/certificates/python.jpg" data-alt="Information Technology Specialist Python certification" data-caption="Information Technology Specialist — Python" aria-label="Enlarge Python certificate">
+          <img src="assets/certificates/python.jpg" width="1500" height="1159" alt="Information Technology Specialist Python certification from Certiport" loading="lazy">
+        </button>
+        <div class="cert-text">
+          <p class="cert-cat">Programming · July 16, 2025</p>
+          <h3 id="c-python">Information Technology Specialist — Python</h3>
+          <p class="cert-issuer">Certiport · Pearson VUE</p>
+          <p>Credential in Python programming, awarded after meeting the Information Technology Specialist certification requirements.</p>
+          <dl class="cert-meta">
+            <div><dt>Validity on document</dt><dd>Five years from the issue date</dd></div>
+            <div><dt>Verification code</dt><dd>wqW8Q-2FvW</dd></div>
+          </dl>
+          <div class="cert-actions">
+            <button class="btn btn-ink" type="button" data-view="assets/certificates/python.jpg" data-alt="Information Technology Specialist Python certification" data-caption="Information Technology Specialist — Python"><svg class="ic"><use href="#i-expand"/></svg><span>Enlarge</span></button>
+            <a class="btn btn-ink-line" href="assets/certificates/python.pdf" download><svg class="ic"><use href="#i-download"/></svg><span>Download PDF</span></a>
+            <a class="btn btn-ink-line" href="assets/certificates/python.pdf" target="_blank" rel="noopener"><span>Open original PDF</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ink-line" href="https://verify.certiport.com/" target="_blank" rel="noopener"><span>Certiport verification</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="cert reveal" aria-labelledby="c-ccna">
+        <button class="cert-img" type="button" data-view="assets/certificates/ccna.jpg" data-alt="CCNA Introduction to Networks certificate of course completion" data-caption="CCNA: Introduction to Networks · Certificate of course completion" aria-label="Enlarge CCNA certificate">
+          <img src="assets/certificates/ccna.jpg" width="1500" height="1159" alt="CCNA: Introduction to Networks certificate of course completion from Cisco Networking Academy" loading="lazy">
+        </button>
+        <div class="cert-text">
+          <p class="cert-cat">Networking · August 2, 2025</p>
+          <h3 id="c-ccna">CCNA: Introduction to Networks</h3>
+          <p class="cert-issuer">Cisco Networking Academy</p>
+          <p>Certificate of course completion for CCNA: Introduction to Networks through Cisco Networking Academy.</p>
+          <div class="cert-actions">
+            <button class="btn btn-ink" type="button" data-view="assets/certificates/ccna.jpg" data-alt="CCNA Introduction to Networks certificate of course completion" data-caption="CCNA: Introduction to Networks · Certificate of course completion"><svg class="ic"><use href="#i-expand"/></svg><span>Enlarge</span></button>
+            <a class="btn btn-ink-line" href="assets/certificates/ccna.pdf" download><svg class="ic"><use href="#i-download"/></svg><span>Download PDF</span></a>
+            <a class="btn btn-ink-line" href="assets/certificates/ccna.pdf" target="_blank" rel="noopener"><span>Open original PDF</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact" aria-labelledby="contact-h">
+    <canvas class="burst burst-soft" id="burst2" aria-hidden="true"></canvas>
+    <div class="wrap contact-in">
+      <h2 class="h-xl split" id="contact-h">Let’s build something together.</h2>
+      <ul class="contact-list">
+        <li class="reveal">
+          <svg class="ic"><use href="#i-mail"/></svg>
+          <a class="contact-main" href="mailto:dwayne.mongaya24@gmail.com">dwayne.mongaya24@gmail.com</a>
+          <button class="icon-btn" type="button" id="copyEmail" aria-label="Copy email address"><svg class="ic"><use href="#i-copy"/></svg></button>
+        </li>
+        <li class="reveal">
+          <svg class="ic"><use href="#i-phone"/></svg>
+          <a class="contact-main" href="tel:09279208107">09279208107</a>
+        </li>
+        <li class="reveal">
+          <svg class="ic"><use href="#i-linkedin"/></svg>
+          <a class="contact-main" href="https://www.linkedin.com/in/dwayne-mongaya-514000330" target="_blank" rel="noopener">LinkedIn — Dwayne Mongaya</a>
+        </li>
+        <li class="reveal">
+          <svg class="ic"><use href="#i-pin"/></svg>
+          <span class="contact-main">Manila, Philippines</span>
+        </li>
+      </ul>
+      <div class="contact-actions reveal">
+        <a class="btn btn-solid mag" href="mailto:dwayne.mongaya24@gmail.com"><svg class="ic"><use href="#i-mail"/></svg><span>Send an email</span></a>
+        <a class="btn btn-line mag" href="assets/Mongaya_Resume.pdf" download><svg class="ic"><use href="#i-download"/></svg><span>Download resume</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot">
+    <a class="logo" href="#home" data-nav aria-label="Back to top">DM<span>.</span></a>
+    <div>
+      <p class="foot-name">Dwayne Carmelo M. Mongaya</p>
+      <p class="muted">Computer Science / Data Science</p>
+    </div>
+    <p class="foot-links">
+      <a href="mailto:dwayne.mongaya24@gmail.com">Email</a>
+      <a href="tel:09279208107">Phone</a>
+      <a href="https://www.linkedin.com/in/dwayne-mongaya-514000330" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </div>
+</footer>
+
+<dialog class="viewer" id="viewer" aria-label="Image viewer">
+  <form method="dialog" class="viewer-in">
+    <button class="icon-btn viewer-close" value="close" aria-label="Close viewer"><svg class="ic"><use href="#i-close"/></svg></button>
+    <img id="viewerImg" alt="">
+    <p class="viewer-cap" id="viewerCap"></p>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><svg class="ic"><use href="#i-check"/></svg><span id="toastText"></span></div>
+
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
