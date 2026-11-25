@@ -105,7 +105,6 @@ const heroName = $('#heroName');
 $('#heroName').setAttribute('aria-label', 'Dwayne Mongaya');
 const roleIn = mask($('.hero-role'));
 const introIn = mask($('.hero-intro'));
-const capIns = $$('.hero-caps .mi');
 const menuLinks = $$('#menu a');
 const menuSpans = menuLinks.map((a) => { const s = document.createElement('span'); s.textContent = a.textContent; a.textContent = ''; a.appendChild(s); return s; });
 const introChars = $$('.intro-name').flatMap((n) => splitIntro(n));
@@ -184,7 +183,6 @@ function updateHero() {
   if (!heroLive) return;
   const k = clamp((0.95 - e) / 0.42);
   heroCopy.style.opacity = String(1 - k);
-  $('.hero-caps').style.opacity = String(1 - k);
   $('.hero-hint').style.opacity = String(1 - k);
   heroCopy.style.translate = `0 ${(-5 * k).toFixed(2)}vh`;
   if (k > 0 && k < 1) {
@@ -218,7 +216,6 @@ function entrance(t0) {
   tl.from(introIn, { yPercent: 100, duration: 0.9, ease: COUT }, at(1200));
   tl.from('.hero-actions', { opacity: 0, y: 14, duration: 0.5, ease: COUT }, at(1350));
   tl.from('.hero-meta', { opacity: 0, x: -10, duration: 0.4, ease: COUT }, at(1450));
-  capIns.forEach((m, i) => tl.from(m, { yPercent: 100, duration: 0.25, ease: COUT }, at(1300 + i * 140)));
   tl.from('.hero-hint', { opacity: 0, duration: 0.5 }, at(1800));
   tl.call(() => heroBurst.ignite(), null, t0 + 0.15);
   tl.call(() => { heroLive = true; lastY = -1; }, null, at(1900));
